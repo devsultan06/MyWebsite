@@ -20,10 +20,10 @@
             </button>
             <ul class="nav-links" id="navLinks">
 
-                <li><a href="{{ url('/') }} class="active"><span>#</span>home</a></li>
+                <li><a href="{{ url('/') }}" class="active"><span>#</span>home</a></li>
                 <li><a href="{{ route('about') }}"><span>#</span>about-me</a></li>
-                <li><a href="#products"><span>#</span>products</a></li>
-                <li><a href="#cart"><span>#</span>add-to-cart</a></li>
+                <li><a href="{{ route('products') }}"><span>#</span>products</a></li>
+                <li><a href="{{ route('cart') }}"><span>#</span>add-to-cart</a></li>
             </ul>
             <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>

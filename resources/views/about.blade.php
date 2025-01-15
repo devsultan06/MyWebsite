@@ -21,8 +21,8 @@
 
                 <li><a href="{{ url('/') }}"><span>#</span>home</a></li>
                 <li><a href=" {{ route('about') }}" class="active"><span>#</span>about-me</a></li>
-                <li><a href="#products"><span>#</span>products</a></li>
-                <li><a href="#cart"><span>#</span>add-to-cart</a></li>
+                <li><a href="{{ route('products') }}"><span>#</span>products</a></li>
+                <li><a href="{{ route('cart') }}"><span>#</span>add-to-cart</a></li>
             </ul>
             <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>

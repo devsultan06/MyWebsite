@@ -10,4 +10,13 @@ class PageController extends Controller
     {
         return view('about'); // This will return the about.blade.php view
     }
+
+    public function products()
+    {
+        return view('products'); // This will return the products.blade.php view
+    }
+    public function cart()
+    {
+        return view('cart'); // This will return the products.blade.php view
+    }
 }

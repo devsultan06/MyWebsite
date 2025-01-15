@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* General Styles */
 body,
 html {
     margin: 0;
@@ -43,7 +42,7 @@ html {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 20px; /* Space between links */
+    gap: 20px;
 }
 
 .nav-links li {
@@ -69,7 +68,6 @@ html {
     color: #ffffff;
 }
 
-/* Hamburger Icon */
 .menu-toggle {
     display: none;
     background: none;
@@ -79,7 +77,6 @@ html {
     cursor: pointer;
 }
 
-/* Mobile Full-Page Menu */
 .nav-links {
     position: relative;
 }
@@ -108,7 +105,6 @@ html {
         display: flex;
     }
 
-    /* Close Button (only on mobile) */
     .close-menu {
         position: absolute;
         top: 10px;
@@ -118,7 +114,7 @@ html {
         font-size: 24px;
         color: white;
         cursor: pointer;
-        display: block; /* Ensure it shows only on mobile */
+        display: block;
         z-index: 1001;
     }
 
@@ -132,7 +128,6 @@ html {
     }
 }
 
-/* Ensure close-menu is hidden on larger screens */
 .close-menu {
     display: none;
 }
@@ -217,7 +212,9 @@ html {
     text-align: right;
 }
 
-div.about-me {
+div.about-me,
+.products-title,
+.cart-title {
     padding: 0 60px;
     color: white;
     margin-top: 20px;
@@ -267,6 +264,185 @@ h1 {
 p {
     line-height: 1.5;
 }
+
+.products {
+    text-align: center;
+    padding: 10px;
+}
+
+.products p {
+    font-size: 25px;
+    margin-top: 30px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: #282c33;
+    border: 1px solid #3e4451;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.product-card .price {
+    font-size: 18px;
+    color: #c778dd;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-card p {
+    padding: 0 10px;
+    color: #abb2bf;
+    font-size: 15px;
+}
+
+.product-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.product-links a {
+    padding: 8px 15px;
+    background-color: #c778dd;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-links a:hover {
+    background-color: #9d5ba4;
+}
+
+.cart-form {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #abb2bf;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid #abb2bf;
+    color: #abb2bf;
+}
+
+.add-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #a84aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: #c678ff;
+}
+
+.cart-table-container {
+    margin-top: 30px;
+    color: white;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.cart-table thead {
+    background-color: #a84aff;
+    color: #fff;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.cart-summary span {
+    color: #27ae60;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+@media screen and (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media screen and (max-width: 768px) {
     .hero-content,
     .container {
@@ -280,5 +456,14 @@ p {
 
     .image-section {
         margin-top: 2rem;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
