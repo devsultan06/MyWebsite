@@ -20,8 +20,8 @@
             </button>
             <ul class="nav-links" id="navLinks">
 
-                <li><a href="#home" class="active"><span>#</span>home</a></li>
-                <li><a href="#about-me"><span>#</span>about-me</a></li>
+                <li><a href="{{ url('/') }} class="active"><span>#</span>home</a></li>
+                <li><a href="{{ route('about') }}"><span>#</span>about-me</a></li>
                 <li><a href="#products"><span>#</span>products</a></li>
                 <li><a href="#cart"><span>#</span>add-to-cart</a></li>
             </ul>

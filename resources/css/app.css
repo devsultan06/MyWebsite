@@ -164,7 +164,7 @@ html {
     color: white;
 }
 
-.text-section .highlight {
+.highlight {
     color: #a84aff;
     font-weight: bold;
 }
@@ -217,8 +217,59 @@ html {
     text-align: right;
 }
 
+div.about-me {
+    padding: 0 60px;
+    color: white;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 60px;
+    gap: 50px;
+    color: white;
+}
+
+.text {
+    max-width: 600px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img {
+    width: 300px;
+}
+
+.image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    opacity: 0.1;
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+}
 @media screen and (max-width: 768px) {
-    .hero-content {
+    .hero-content,
+    .container {
         flex-direction: column;
         text-align: center;
     }
