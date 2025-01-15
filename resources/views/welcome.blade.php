@@ -49,6 +49,11 @@
         </div>
     </section>
 
+    <div class="quote">
+        <img src="{{ asset('images/quote.png') }}" alt="Profile-Picture" class="profile-pic">
+
+    </div>
+
     <script
         src="https://kit.fontawesome.com/b13eb6739b.js"
         crossorigin="anonymous">

@@ -204,6 +204,18 @@ html {
     font-weight: bold;
     color: #ffffff;
 }
+.quote {
+    padding: 20px;
+    margin: 20px auto;
+    width: 500px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.author {
+    margin-top: 20px;
+    text-align: right;
+}
 
 @media screen and (max-width: 768px) {
     .hero-content {
