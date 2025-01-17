@@ -23,7 +23,7 @@
                 <li><a href="{{ url('/') }}" class="active"><span>#</span>home</a></li>
                 <li><a href="{{ route('about') }}"><span>#</span>about-me</a></li>
                 <li><a href="{{ route('products') }}"><span>#</span>products</a></li>
-                <li><a href="{{ route('cart') }}"><span>#</span>add-to-cart</a></li>
+                <li><a href="{{ route('addproduct') }}"><span>#</span>add-product</a></li>
             </ul>
             <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>
@@ -41,7 +41,7 @@
                 <p class="description">
                     He crafts responsive websites where technologies meet creativity
                 </p>
-                <button class="contact-btn">Contact me!!</button>
+                <a href="{{ route('products') }}" class="check-btn">Check my store!!!</a>
             </div>
             <div class="image-section">
                 <img src="{{ asset('images/pp.png') }}" alt="Profile-Picture" class="profile-pic">

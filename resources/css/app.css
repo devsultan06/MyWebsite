@@ -123,7 +123,7 @@ html {
     color: #afafb6;
 }
 
-.contact-btn {
+.check-btn {
     background-color: #a84aff;
     color: #1e1e2c;
     padding: 0.8rem 1.5rem;
@@ -134,7 +134,7 @@ html {
     transition: all 0.3s ease;
 }
 
-.contact-btn:hover {
+.check-btn:hover {
     background-color: #c678ff;
 }
 

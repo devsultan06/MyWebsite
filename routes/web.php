@@ -9,5 +9,5 @@ Route::get('/', function () {
 
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/products', [PageController::class, 'products'])->name('products');
-Route::get('/cart', [PageController::class, 'cart'])->name('cart');
+Route::get('/addproduct', [PageController::class, 'addproduct'])->name('addproduct');
 

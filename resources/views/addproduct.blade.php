@@ -22,7 +22,7 @@
                 <li><a href="{{ url('/') }}"><span>#</span>home</a></li>
                 <li><a href=" {{ route('about') }}"><span>#</span>about-me</a></li>
                 <li><a href="{{ route('products') }}"><span>#</span>products</a></li>
-                <li><a href="{{ route('cart') }}" class="active"><span>#</span>add-to-cart</a></li>
+                <li><a href="{{ route('addproduct') }}" class="active"><span>#</span>add-product</a></li>
             </ul>
             <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>
@@ -31,7 +31,7 @@
     </nav>
 
     <div class="cart-title">
-        <h1> <span class="highlight">/</span>add-to-cart</h1>
+        <h1> <span class="highlight">/</span>add-product</h1>
         <p>Let's help you add some item</p>
     </div>
 
@@ -62,26 +62,6 @@
             <button type="submit" class="add-btn">Add Product</button>
         </form>
 
-        <div class="cart-table-container">
-            <h2>Your Cart</h2>
-            <table class="cart-table" id="cartTable">
-                <thead>
-                    <tr>
-                        <th>Product Name</th>
-                        <th>Price ($)</th>
-                        <th>Quantity</th>
-                        <th>Subtotal ($)</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-
-            <div class="cart-summary">
-                <p>Total: <span id="cartTotal">$0.00</span></p>
-            </div>
-        </div>
     </div>
 
 
