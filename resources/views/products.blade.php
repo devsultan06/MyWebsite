@@ -50,7 +50,7 @@
             </div>
 
             <div class="product-card">
-                <img src="{{ asset('images/product2.jpg') }}" alt="Product 2">
+                <img src="{{ asset('images/product2.avif') }}" alt="Product 2">
                 <h3>Smartwatch Pro</h3>
                 <p class="price">$200.00</p>
                 <p>Track your fitness goals with this stylish smartwatch featuring heart rate monitoring and GPS.</p>
@@ -61,7 +61,7 @@
             </div>
 
             <div class="product-card">
-                <img src="{{ asset('images/product3.jpg') }}" alt="Product 3">
+                <img src="{{ asset('images/product3.webp') }}" alt="Product 3">
                 <h3>Bluetooth Speaker</h3>
                 <p class="price">$80.00</p>
                 <p>Portable Bluetooth speaker with rich sound and water-resistant design for outdoor use.</p>
@@ -82,16 +82,18 @@
                 </div>
             </div>
 
+            @foreach ($products as $product)
             <div class="product-card">
-                <img src="{{ asset('images/product4.webp') }}" alt="Product 4">
-                <h3>Gaming Mouse</h3>
-                <p class="price">$50.00</p>
-                <p>Ergonomic gaming mouse with customizable RGB lighting and precision sensor.</p>
+                <img src="{{ asset('storage/' . $product->image_path) }}" alt="{{ $product->name }}">
+                <h3>{{ $product->name }}</h3>
+                <p class="price">${{ number_format($product->price, 2) }}</p>
+                <p>{{ $product->description }}</p>
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 

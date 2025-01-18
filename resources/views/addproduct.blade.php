@@ -38,7 +38,8 @@
 
     <div class="cart-form">
 
-        <form id="cartForm">
+        <form id="cartForm" action="{{ route('storeProduct') }}" method="POST" enctype="multipart/form-data">
+            @csrf <!-- Add this line -->
             <div class="form-group">
                 <label for="productName">Product Name</label>
                 <input type="text" id="productName" name="productName" placeholder="Enter product name" required>
@@ -59,17 +60,21 @@
                 <textarea id="productDescription" name="productDescription" placeholder="Enter product description" required></textarea>
             </div>
 
+
+            <div class="form-group">
+                <label for="productImage">Product Image</label>
+                <input type="file" id="productImage" name="productImage" required>
+            </div>
             <button type="submit" class="add-btn">Add Product</button>
         </form>
 
     </div>
 
-
-
     <script
         src="https://kit.fontawesome.com/b13eb6739b.js"
         crossorigin="anonymous">
     </script>
+
     @vite('resources/js/app.js')
 
 </body>

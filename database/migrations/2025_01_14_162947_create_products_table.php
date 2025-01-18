@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name'); // Product name
             $table->string('image_path'); // Path to the product image
             $table->decimal('price', 10, 2); // Product price with precision
+            $table->integer('quantity');
             $table->text('description'); // Product description
             $table->timestamps(); // Created at and Updated at timestamps
         });
