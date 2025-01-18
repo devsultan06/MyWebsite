@@ -51,7 +51,7 @@
 
         <div class="payment-form">
             <h3>Payment Details</h3>
-            <form method="POST">
+            <form id="paymentForm" method="POST">
                 @csrf
                 <input type="hidden" name="product_id" value="{{ $product->id }}">
 
@@ -85,6 +85,31 @@
     </script>
 
     @vite('resources/js/app.js')
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var productName = "{{ $product->name }}";
+            var productPrice = "{{ number_format($product->price, 2) }}";
+            var productQuantity = "{{ $product->quantity }}";
+
+            var message = `
+        Transaction Successful!
+        \n\nProduct: ${productName}
+        \nPrice: $${productPrice}
+        \nQuantity Purchased: 1 (You have ${productQuantity} left)
+        \n\nYour purchase was successful and the payment has been processed. Thank you for shopping with us!
+        \n\nYou will receive an order confirmation email shortly.`;
+
+            alert(message);
+
+            document.getElementById('paymentForm').reset();
+
+            window.location.href = '/thank-you';
+
+        });
+    </script>
 
 </body>
 

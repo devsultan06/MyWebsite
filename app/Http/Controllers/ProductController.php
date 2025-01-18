@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function thankyou()
+    {
+        return view('thank-you');
+    }
     public function store(Request $request)
     {
         $request->validate([
@@ -18,7 +22,7 @@ class ProductController extends Controller
         ]);
 
 
-        // Handle file upload
+        // Handle file upload 
         $imagePath = $request->file('productImage')->store('products', 'public');
 
         Product::create([

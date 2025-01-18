@@ -395,7 +395,7 @@ p {
     display: flex;
     gap: 2rem;
     margin: 2rem;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 .product-details {
     color: white;
@@ -404,7 +404,7 @@ p {
 .product-details,
 .payment-form {
     flex: 1;
-    min-width: 300px; 
+    min-width: 300px;
 }
 
 .product-details img {
@@ -434,7 +434,7 @@ p {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #abb2bf;
-    color: #abb2bf;
+    color: white;
     border-radius: 5px;
     background: transparent;
 }
@@ -450,6 +450,45 @@ button.pay {
 
 button.pay:hover {
     background-color: #c678ff;
+}
+
+.thank-you-page {
+    color: white;
+    border: 1px solid #abb2bf;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.thank-you-page h1 {
+    font-size: 2rem;
+}
+
+.thank-you-page p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.thank-you-page .btn {
+    background-color: #a84aff;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.thank-you-page .btn:hover {
+    background-color: #c678ff;
+}
+
+.thank-image{
+    width: 20%;
+    height: 20%;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 900px) {
