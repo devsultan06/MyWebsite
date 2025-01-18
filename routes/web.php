@@ -11,4 +11,4 @@ Route::get('/', function () {
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::get('/addproduct', [PageController::class, 'addproduct'])->name('addproduct');
-Route::post('/addproduct', [ProductController::class, 'store'])->name('storeProduct');
+Route::post('/products', [ProductController::class, 'store'])->name('storeProduct');

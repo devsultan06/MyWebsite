@@ -109,6 +109,15 @@
         src="https://kit.fontawesome.com/b13eb6739b.js"
         crossorigin="anonymous">
     </script>
+
+    @if (session('success'))
+    <script>
+        window.onload = function() {
+            alert("{{ session('success') }}");
+        };
+    </script>
+    @endif
+
     @vite('resources/js/app.js')
 
 </body>
