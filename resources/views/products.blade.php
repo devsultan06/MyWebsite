@@ -24,9 +24,9 @@
                 <li><a href="{{ route('products') }}" class="active"><span>#</span>products</a></li>
                 <li><a href="{{ route('addproduct') }}"><span>#</span>add-product</a></li>
             </ul>
-            <button class="close-menu" id="closeMenu">
+            <!-- <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>
-            </button>
+            </button> -->
         </div>
     </nav>
 
@@ -43,6 +43,7 @@
                 <h3>Wireless Headphones</h3>
                 <p class="price">$120.00</p>
                 <p>High-quality wireless headphones with noise cancellation and 20-hour battery life.</p>
+                <p class="quantity">Quantity: 10</p>
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>
@@ -54,6 +55,7 @@
                 <h3>Smartwatch Pro</h3>
                 <p class="price">$200.00</p>
                 <p>Track your fitness goals with this stylish smartwatch featuring heart rate monitoring and GPS.</p>
+                <p class="quantity">Quantity: 2</p>
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>
@@ -65,6 +67,7 @@
                 <h3>Bluetooth Speaker</h3>
                 <p class="price">$80.00</p>
                 <p>Portable Bluetooth speaker with rich sound and water-resistant design for outdoor use.</p>
+                <p class="quantity">Quantity: 5</p>
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>
@@ -76,6 +79,7 @@
                 <h3>Gaming Mouse</h3>
                 <p class="price">$50.00</p>
                 <p>Ergonomic gaming mouse with customizable RGB lighting and precision sensor.</p>
+                <p class="quantity">Quantity: 25</p>
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>
@@ -88,6 +92,7 @@
                 <h3>{{ $product->name }}</h3>
                 <p class="price">${{ number_format($product->price, 2) }}</p>
                 <p>{{ $product->description }}</p>
+                <p class="quantity">Quantity: {{ $product->quantity }}</p> <!-- Display the product quantity -->
                 <div class="product-links">
                     <a href="#">Buy Now</a>
                     <a href="#">Add to Cart</a>

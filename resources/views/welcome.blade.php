@@ -25,9 +25,9 @@
                 <li><a href="{{ route('products') }}"><span>#</span>products</a></li>
                 <li><a href="{{ route('addproduct') }}"><span>#</span>add-product</a></li>
             </ul>
-            <button class="close-menu" id="closeMenu">
+            <!-- <button class="close-menu" id="closeMenu">
                 <i class="fa-solid fa-times"></i>
-            </button>
+            </button> -->
         </div>
     </nav>
 
