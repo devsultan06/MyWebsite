@@ -19,4 +19,8 @@ class PageController extends Controller
     {
         return view('addproduct'); // This will return the products.blade.php view
     }
+    public function productDetails()
+    {
+        return view('productDetails'); // This will return the prooductDtails.blade.php view
+    }
 }

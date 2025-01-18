@@ -45,7 +45,7 @@
                 <p>High-quality wireless headphones with noise cancellation and 20-hour battery life.</p>
                 <p class="quantity">Quantity: 10</p>
                 <div class="product-links">
-                    <a href="#">Buy Now</a>
+                    <a href="{{ route('productDetails', ['id' => 20]) }}">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                 <p>Track your fitness goals with this stylish smartwatch featuring heart rate monitoring and GPS.</p>
                 <p class="quantity">Quantity: 2</p>
                 <div class="product-links">
-                    <a href="#">Buy Now</a>
+                    <a href="{{ route('productDetails', ['id' => 21]) }}">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                 <p>Portable Bluetooth speaker with rich sound and water-resistant design for outdoor use.</p>
                 <p class="quantity">Quantity: 5</p>
                 <div class="product-links">
-                    <a href="#">Buy Now</a>
+                    <a href="{{ route('productDetails', ['id' => 22]) }}">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                 <p>Ergonomic gaming mouse with customizable RGB lighting and precision sensor.</p>
                 <p class="quantity">Quantity: 25</p>
                 <div class="product-links">
-                    <a href="#">Buy Now</a>
+                    <a href="{{ route('productDetails', ['id' => 23]) }}">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
@@ -92,18 +92,15 @@
                 <h3>{{ $product->name }}</h3>
                 <p class="price">${{ number_format($product->price, 2) }}</p>
                 <p>{{ $product->description }}</p>
-                <p class="quantity">Quantity: {{ $product->quantity }}</p> <!-- Display the product quantity -->
+                <p class="quantity">Quantity: {{ $product->quantity }}</p> 
                 <div class="product-links">
-                    <a href="#">Buy Now</a>
+                    <a href="{{ route('productDetails', ['id' => $product->id]) }}">Buy Now</a>
                     <a href="#">Add to Cart</a>
                 </div>
             </div>
             @endforeach
         </div>
     </div>
-
-
-
 
     <script
         src="https://kit.fontawesome.com/b13eb6739b.js"
