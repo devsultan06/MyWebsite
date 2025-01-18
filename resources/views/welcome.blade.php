@@ -41,6 +41,7 @@
                 <p class="description">
                     He crafts responsive websites where technologies meet creativity
                 </p>
+                <a href="{{ route('about') }}" class="check-btn">Check out my bio!!!</a>
                 <a href="{{ route('products') }}" class="check-btn">Check my store!!!</a>
             </div>
             <div class="image-section">
