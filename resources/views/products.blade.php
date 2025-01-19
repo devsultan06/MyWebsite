@@ -46,7 +46,6 @@
                 <p class="quantity">Quantity: 10</p>
                 <div class="product-links">
                     <a href="{{ route('productDetails', ['id' => 20]) }}">Buy Now</a>
-                    <a href="#">Add to Cart</a>
                 </div>
             </div>
 
@@ -58,7 +57,6 @@
                 <p class="quantity">Quantity: 2</p>
                 <div class="product-links">
                     <a href="{{ route('productDetails', ['id' => 21]) }}">Buy Now</a>
-                    <a href="#">Add to Cart</a>
                 </div>
             </div>
 
@@ -70,7 +68,6 @@
                 <p class="quantity">Quantity: 5</p>
                 <div class="product-links">
                     <a href="{{ route('productDetails', ['id' => 22]) }}">Buy Now</a>
-                    <a href="#">Add to Cart</a>
                 </div>
             </div>
 
@@ -82,7 +79,6 @@
                 <p class="quantity">Quantity: 25</p>
                 <div class="product-links">
                     <a href="{{ route('productDetails', ['id' => 23]) }}">Buy Now</a>
-                    <a href="#">Add to Cart</a>
                 </div>
             </div>
 
@@ -95,7 +91,6 @@
                 <p class="quantity">Quantity: {{ $product->quantity }}</p> 
                 <div class="product-links">
                     <a href="{{ route('productDetails', ['id' => $product->id]) }}">Buy Now</a>
-                    <a href="#">Add to Cart</a>
                 </div>
             </div>
             @endforeach
